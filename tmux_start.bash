@@ -20,4 +20,9 @@ tmux send-keys -t $SESSION:2 ':' 'tabe src/teaching.tex' C-m
 tmux split-window -h -p 20
 tmux select-pane -t 0
 
+tmux new-window -t $SESSION:3 -n git
+tmux send-keys -t $SESSION:3 "GD='https://github.com/mpadge/application-template.git'" C-m
+tmux select-window -t $SESSION:2
+
+
 tmux attach -t $SESSION
