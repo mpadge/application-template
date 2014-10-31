@@ -1,5 +1,5 @@
 #!/bin/sh
-SESSION="Toronto"
+SESSION="application"
 PDFREADER="xdg-open"
 
 tmux -2 new-session -d -s $SESSION
