@@ -1,0 +1,34 @@
+\documentclass[a4paper,oneside,hidelinks]{article}
+% hidelinks removes ugly hyperref coloured borders
+\RequirePackage{src/mycv}
+
+\usepackage{marvosym,lastpage}
+\rfoot{\color{greencolour}\sffamily\footnotesize{\thepage/\pageref*{LastPage}}}
+% pageref* turns off hyperref links
+\rhead{\color{greencolour}\small{Name Goes Here\\
+    \Letter\hspace{2pt} myemail@email.com}}%
+
+\begin{document}
+%\linenumbers
+\pagestyle{empty}
+\include{src/letter}
+
+\pagestyle{fancy}
+\lhead{\color{greencolour}{\rule[2pt]{\datescolumnwidth}{2pt}}\hspace{0.01\textwidth}\normalsize Curriculum Vitae}
+\include{src/cv}
+
+\lhead{\color{greencolour}{\rule[2pt]{\datescolumnwidth}{2pt}}\hspace{0.01\textwidth}\normalsize Research Interests}
+\thispagestyle{noheader}
+\include{src/research}
+
+\lhead{\color{greencolour}{\rule[2pt]{\datescolumnwidth}{2pt}}\hspace{0.01\textwidth}\normalsize Teaching Dossier}
+\thispagestyle{noheader}
+\include{src/teaching}
+
+%{\setlength{\bibsep}{0pt}
+%\footnotesize
+%\bibliographystyle{elsarticle-harv}
+%\bibliography{/biblibrary}
+%}
+
+\end{document}
