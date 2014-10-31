@@ -1,0 +1,4 @@
+application-template
+====================
+
+Latex template
